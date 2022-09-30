@@ -1,0 +1,42 @@
+.sidebar {
+    flex: 0.18;
+    background-color: black;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+
+
+.sidebar-content-item {
+    color: white;
+    padding:  20px 70px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+@media screen and (max-width : 850px) {
+    .sidebar {
+        display: none;
+    }
+}

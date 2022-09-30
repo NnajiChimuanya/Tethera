@@ -1,0 +1,41 @@
+.dashboard {
+    height: 100vh;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.dashboard::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-main {
+    flex: 0.82;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.dashboard-main::-webkit-scrollbar {
+    display: none;
+}
+
+/* Dashboard expense */
+
+
+
+
+/* Main Balance */
+
+
+
+@media screen and (max-width : 650px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .dashboard-main {
+        display: grid;
+    }
+}
+ 
