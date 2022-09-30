@@ -16,19 +16,18 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)({
-    origin: "https://mono-accessment-frontend.vercel.app",
+    origin: "http://tethera.vercel.app",
     methods: "GET, POST, PUT, DELETE, OPTIONS",
     credentials: true,
 }));
 // "https://mono-accessment-frontend.vercel.app"
-try {
-    mongoose_1.default.connect("mongodb+srv://Muanyachi:76149494ABMICTU@mono.pkmxyad.mongodb.net/?retryWrites=true&w=majority");
-    console.log("Connected");
-}
-catch (err) {
+mongoose_1.default
+    .connect("mongodb+srv://Muanyachi:76149494ABMICTU@mono.pkmxyad.mongodb.net/?retryWrites=true&w=majority")
+    .then(() => console.log("connected to database"))
+    .catch((err) => {
     console.log(err);
     process.exit(1);
-}
+});
 app.get("/", (req, res) => res.send("This is the begining of the mono backend"));
 app.use("/auth", authRouter_js_1.default);
 app.use("/code", monoRouter_js_1.default);
