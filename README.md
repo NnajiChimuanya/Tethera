@@ -2,7 +2,7 @@
 
 ## Live Project
 
-### https://mono-accessment-frontend.vercel.app
+### https://tethera.vercel.app/
 
 #
 
